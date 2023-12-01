@@ -7,10 +7,28 @@ export default {
 </script>
 
 <template>
-    <div v-for="elemento in arrayGenerato">
-        <span>{{ elemento.name }}</span>
-        <span> {{ elemento.city }}</span>
+    <div class="container">
+        <div v-for="elemento in arrayGenerato">
+            <div class="card2">
+                Nome: <br>{{ elemento.name }}
+                Citta: <br> {{ elemento.city }}
+            </div>
+        </div>
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+    display: flex;
+    flex-direction: row;
+}
+</style>
+
+<style scoped>
+.card2 {
+    background-color: #66D3FA;
+    margin: 2%;
+    height: 12rem;
+    text-align: center;
+}
+</style>
